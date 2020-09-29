@@ -1,0 +1,21 @@
+{
+  "name": "ferry_sample_app",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "yarn schema && flutter pub run build_runner build --delete-conflicting-outputs",
+    "watch": "yarn schema && flutter pub run build_runner watch --delete-conflicting-outputs",
+    "schema": "get-graphql-schema https://mysterious-stream-05273.herokuapp.com/graphql > lib/graphql/schema.graphql",
+    "clean": "flutter clean && flutter pub get"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "get-graphql-schema": "2.1.2"
+  }
+}

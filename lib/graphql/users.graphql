@@ -1,0 +1,7 @@
+# import './user_fragment.graphql';
+
+query users {
+  users {
+    ...UserFragment
+  }
+}
